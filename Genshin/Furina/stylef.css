@@ -1,0 +1,78 @@
+body {
+    font-family: Pacifico, Great Vibes;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    background: linear-gradient(to top, black, #01026b, #072192, #e2e1eb);
+    overflow: hidden;
+}
+
+h1, .zdj, .zdj2, .opis, footer {
+    transition: transform 0.3s ease;
+    animation: fadeInUp 3s ease-out;
+}
+
+h1 {
+    font-size: 7vh;
+    animation: slideDown 2s ease-out;
+}
+
+h1:hover, .zdj:hover, .zdj2:hover, .opis:hover, footer:hover {
+    transform: scale(1.1);
+}
+
+@keyframes slideDown {
+    0% {
+        opacity: 0; 
+        transform: translateY(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.zdj {
+    height: 100vh;
+    width: auto; 
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.zdj2 {
+    margin-top: 500px;
+    height: 50vh;
+    margin: 20px;
+    position: absolute;
+    right: 0;
+    bottom: 430px;
+}
+
+.opis {
+    margin-top: 300px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    width: 40%;
+    height: 50%;
+}
+
+footer {
+    position: absolute;
+    bottom: 20px; 
+}
