@@ -1,0 +1,69 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    background: linear-gradient(to top, black, #000080, #14328a, #153677);
+}
+#logo {
+    max-width: 800px; 
+    width: 100%; 
+    height: auto; 
+    margin-top: 20px; 
+    transition: transform 0.3s ease;  
+    animation: slideDown 1s ease-out; 
+}
+#logo:hover {
+    transform: scale(1.1);
+}
+@keyframes slideDown {
+    0% {
+        opacity: 0; 
+        transform: translateY(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.postacie {
+    display: flex;
+    gap: 100px; 
+    margin-top: 150px;
+}
+.postac {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.postac-zdj {
+    max-width: 800px;
+    height: auto;
+    border: 5px solid #0a569e;
+    border-radius: 15px; 
+    transition: transform 0.3s ease; 
+    animation: fadeInUp 1s ease-out;
+}
+.postac-zdj:hover {
+    transform: scale(1.1);
+}
+.napis {
+    margin-top: 10px;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    opacity: 0;
+    animation: fadeInUp 1s ease-out forwards;
+}
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
